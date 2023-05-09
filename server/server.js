@@ -11,7 +11,6 @@ app.use(bodyParser.json())
 app.use(cors({ origin: true, credentials: true }))
 
 
-const stripe = require('stripe')('sk_test_51N5FpcLlD6wNznVZq8IWB20JW96IuyLlmRF1888xMXoMVtM1LYOrGRWKiHPC0sexoGYeOQjvykIsI2pThJEcVQM600ACB0BeuU')
 
 app.post('/checkout', async (req, res, next) => {
   try {

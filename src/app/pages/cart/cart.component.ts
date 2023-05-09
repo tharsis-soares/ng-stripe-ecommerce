@@ -69,7 +69,7 @@ ngOnInit(): void {
     this.http.post('http://localhost:4242/checkout', {
       items: this.cart.items
     }).subscribe(async(res: any) => {
-      let stripe = await loadStripe('pk_test_51N5FpcLlD6wNznVZYxGkO2NZ8mVMYiO9aT3pmnhDUTH8I7HoaXUeessqxhlcmH8yKhu39DNYZ8spMf4AiOzrVLg4003QoOBzs6')
+      let stripe = await loadStripe(stripe_pwd)
       stripe?.redirectToCheckout({
         sessionId: res.id
       })
